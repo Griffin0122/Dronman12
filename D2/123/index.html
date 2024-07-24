@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dronman</title>
+    <style>                                               
+        body { 
+            font-family: Arial, sans-serif;              
+            margin: 0;                                   
+            padding: 0;                                  
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+    <img src="../images/wg_Dronman.jpg"  alt="這是一張灰白色Dronman logo的圖片" width="150" height="100"></img>
+</head>
+<body>
+    <div class="container">
+        <h1>Dronman AI</h1>
+        <label for="inputText">Enter your prompt:</label>
+        <input type="text" id="inputText" placeholder="Type your prompt here...">
+        <button onclick="generate()">Generate</button>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function generate() {
+            const inputText = document.getElementById('inputText').value;
+            const temperature = document.getElementById('temperature').value;
+
+            // Make an AJAX request to your backend service to generate content
+            // This is just a placeholder
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = 'Generated content will appear here...';
+        }
+    </script>
+</body>
+</html>
